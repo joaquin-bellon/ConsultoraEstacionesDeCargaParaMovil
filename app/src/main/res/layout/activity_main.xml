@@ -40,6 +40,15 @@
             android:textSize="22sp" />
 
     </com.google.android.material.appbar.MaterialToolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.3"
+        android:orientation="vertical">
+
+    </LinearLayout>
+
     <!--
     <LinearLayout
         android:id="@+id/CabeceraLayout"
@@ -82,94 +91,123 @@
             app:srcCompat="@drawable/mas_opciones" />
     </LinearLayout>
     -->
-    <LinearLayout
-        android:id="@+id/LocalizaPuntosLayout"
+    <TextView
+        android:id="@+id/LocalizarPuntosText"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1.3"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/LocalizarPuntosText"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="5dp"
-            android:autoSizeMaxTextSize="34sp"
-            android:autoSizeMinTextSize="20sp"
-            android:autoSizeTextType="uniform"
-            android:autoText="false"
-            android:ellipsize="end"
-            android:gravity="center"
-            android:maxLines="4"
-            android:text="@string/principal_texto_localizapuntos"
-            android:textColor="#01591C"
-            android:textSize="34sp"
-            android:textStyle="bold" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/EncuentraEstacionesLayout"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.8"
-        android:orientation="vertical">
-
-        <TextView
-            android:id="@+id/EncuentraEstacionesText"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:autoSizeMaxTextSize="20sp"
-            android:autoSizeMinTextSize="14sp"
-            android:autoSizeTextType="uniform"
-            android:autoText="true"
-            android:ellipsize="end"
-            android:gravity="center|top"
-            android:maxLines="4"
-            android:text="@string/principal_encuentra_estaciones"
-            android:textColor="#000000"
-            android:textSize="20sp"
-            android:textStyle="normal" />
-    </LinearLayout>
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="10dp"
+        android:autoText="false"
+        android:gravity="center"
+        android:text="@string/principal_texto_localizapuntos"
+        android:textColor="#01591C"
+        android:textSize="32sp"
+        android:textStyle="bold" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1.5"
-        android:orientation="vertical">
-
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/CardCoche"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="20dp"
-            android:layout_marginBottom="5dp"
-            android:visibility="visible"
-            app:cardCornerRadius="20dp">
-
-            <ImageView
-                android:id="@+id/coche"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:adjustViewBounds="true"
-                app:srcCompat="@drawable/coche_electrico" />
-        </androidx.cardview.widget.CardView>
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1.1"
+        android:layout_weight="0.2"
         android:orientation="vertical"></LinearLayout>
 
+    <TextView
+        android:id="@+id/EncuentraEstacionesText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:autoText="true"
+        android:gravity="center|top"
+        android:text="@string/principal_encuentra_estaciones"
+        android:textColor="#000000"
+        android:textSize="22sp"
+        android:textStyle="normal" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.7"
+        android:layout_weight="0.3"
         android:orientation="vertical"></LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/CardCoches"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_weight="4"
+        android:visibility="visible"
+        app:cardCornerRadius="20dp">
+
+        <ImageView
+            android:id="@+id/coche"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/coche_electrico" />
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.4"
+        android:orientation="vertical"></LinearLayout>
+
+    <Button
+        android:id="@+id/btnConsultarPuntos"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_weight="0.9"
+        android:autoSizeMaxTextSize="10dp"
+        android:autoSizeMinTextSize="20dp"
+        android:autoSizeTextType="none"
+        android:autoText="false"
+        android:backgroundTint="#01591C"
+        android:text="Consultar puntos"
+        android:textSize="18sp"
+        app:cornerRadius="11dp"
+        app:icon="@drawable/outline_list_alt"
+        app:iconGravity="textStart"
+        app:iconPadding="15dp"
+        app:iconSize="30dp" />
+
+    <Button
+        android:id="@+id/btnMiUbicacion"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="20dp"
+        android:layout_weight="0.9"
+        android:text="Mi Ubicación"
+        android:textColor="#01591C"
+        android:textSize="18dp"
+        app:cornerRadius="11dp"
+        app:icon="@drawable/baseline_my_location"
+        app:iconGravity="textStart"
+        app:iconPadding="50dp"
+        app:iconSize="30dp"
+        app:iconTint="#01591C"
+        app:strokeColor="#01591C"
+        app:strokeWidth="2.5dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.3"
+        android:orientation="vertical"></LinearLayout>
+
+    <ImageView
+        android:id="@+id/Arboles"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        app:srcCompat="@drawable/img_paisaje_verde" />
 
 </LinearLayout>
