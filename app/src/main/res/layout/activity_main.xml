@@ -1,19 +1,213 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/Toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#01591C"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/ThemeOverlay.Material3.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.Material3.Light">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageView
+            android:id="@+id/ic_localizacion"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="10dp"
+            app:srcCompat="@drawable/localizacion" />
+
+        <TextView
+            android:id="@+id/CargadoresElectricos"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
+            android:autoSizeMaxTextSize="22sp"
+            android:autoSizeTextType="uniform"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/title_app"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp" />
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.3"
+        android:orientation="vertical">
+
+    </LinearLayout>
+
+    <!--
+    <LinearLayout
+        android:id="@+id/CabeceraLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:background="#000000"
+        android:backgroundTint="#01591C"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp">
+
+        <ImageView
+            android:id="@+id/ic_localizacion"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="10dp"
+            app:srcCompat="@drawable/localizacion" />
+
+        <TextView
+            android:id="@+id/CargadoresElectricos"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="25dp"
+            android:autoSizeMaxTextSize="24sp"
+            android:autoSizeTextType="uniform"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/title_app"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/ic_mas_opciones"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginRight="10dp"
+            app:srcCompat="@drawable/mas_opciones" />
+    </LinearLayout>
+    -->
+    <TextView
+        android:id="@+id/LocalizarPuntosText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="10dp"
+        android:autoText="false"
+        android:gravity="center"
+        android:text="@string/principal_texto_localizapuntos"
+        android:textColor="#01591C"
+        android:textSize="32sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.2"
+        android:orientation="vertical"></LinearLayout>
+
+    <TextView
+        android:id="@+id/EncuentraEstacionesText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:autoText="true"
+        android:gravity="center|top"
+        android:text="@string/principal_encuentra_estaciones"
+        android:textColor="#000000"
+        android:textSize="22sp"
+        android:textStyle="normal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.3"
+        android:orientation="vertical"></LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/CardCoches"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_weight="4"
+        android:visibility="visible"
+        app:cardCornerRadius="20dp">
+
+        <ImageView
+            android:id="@+id/coche"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/coche_electrico" />
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.4"
+        android:orientation="vertical"></LinearLayout>
+
+    <Button
+        android:id="@+id/btnConsultarPuntos"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_weight="0.9"
+        android:autoSizeMaxTextSize="10dp"
+        android:autoSizeMinTextSize="20dp"
+        android:autoSizeTextType="none"
+        android:autoText="false"
+        android:backgroundTint="#01591C"
+        android:text="Consultar puntos"
+        android:textSize="18sp"
+        app:cornerRadius="11dp"
+        app:icon="@drawable/outline_list_alt"
+        app:iconGravity="textStart"
+        app:iconPadding="15dp"
+        app:iconSize="30dp" />
+
+    <Button
+        android:id="@+id/btnMiUbicacion"
+        style="@style/Widget.Material3.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="20dp"
+        android:layout_weight="0.9"
+        android:text="Mi Ubicación"
+        android:textColor="#01591C"
+        android:textSize="18dp"
+        app:cornerRadius="11dp"
+        app:icon="@drawable/baseline_my_location"
+        app:iconGravity="textStart"
+        app:iconPadding="50dp"
+        app:iconSize="30dp"
+        app:iconTint="#01591C"
+        app:strokeColor="#01591C"
+        app:strokeWidth="2.5dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.3"
+        android:orientation="vertical"></LinearLayout>
+
+    <ImageView
+        android:id="@+id/Arboles"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        app:srcCompat="@drawable/img_paisaje_verde" />
+
+</LinearLayout>

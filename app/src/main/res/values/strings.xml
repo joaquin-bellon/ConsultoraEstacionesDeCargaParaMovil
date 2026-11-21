@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">E2_BellonBorjaJoaquin</string>
+    <string name="title_app">Cargadores Eléctricos</string>
+    <string name="principal_texto_localizapuntos">Localiza puntos de recarga para tu vehículo eléctrico</string>
+    <string name="principal_encuentra_estaciones">Encuentra estaciones de carga, consulta sus características y visualiza su ubicación.</string>
+    <string name="menu_inicio">Inicio</string>
+    <string name="menu_acerca_de">Acerca de</string>
+    <string name="menu_contacto">Contacto</string>
+    <string name="menu_salir">Salir</string>
 </resources>
